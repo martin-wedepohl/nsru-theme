@@ -1,0 +1,159 @@
+/*
+Theme Name: North Shore Round Up
+Description:  Child Theme Based on Layers-Elementor
+Author: Martin Wedepohl (martin.wedepohl@shaw.ca))
+Author URI: http://wedepohlengineering/
+Theme URI: https://northshoreroundup.com
+Template: layers-elementor
+Version: 1.0.0
+Tags: slider, site-builder, page-builder, responsive-layout, fixed-layout, fluid-layout, one-column, one-column, two-column, three-column, four-column, custom-colors, custom-header, custom-menu, editor-style, featured-images, translation-ready, full-width-template, theme-options
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: nsru
+*/
+
+.scrollup {
+    display: block;
+    text-align: right;
+}
+
+.scrollup i {
+    font-size: 3em;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.hotel_list li {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.pastchairstitle {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.pastchairs table,
+.committee table {
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.pastchairs td {
+    border: none;
+    padding: 0 0 0 40px;
+    display: block;
+}
+
+.committee td {
+    border: none;
+    display: table-cell;
+}
+
+.committee tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.meetings th {
+    display: block;
+    font-size: 2em;
+    text-align: left;
+}
+
+.meetings td {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+}
+
+.meetings td:nth-of-type(1) {
+    font-weight: bold;
+    padding-left: 5px;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.meetings td:nth-of-type(2) {
+    border-bottom: none;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.meetings td:nth-of-type(3) {
+    padding-top: 0;
+}
+
+.paypal_buynow {
+    text-align: center;
+}
+
+.paypal_buynow .ticket_surcharge {
+    font-size: 0.8em;
+    font-weight: 900;
+    padding-bottom: 20px;
+}
+
+.all-speakers {
+    font-size:1.2em;
+    text-align: center;
+}
+
+.copyright {
+    text-align:right;
+}
+
+@media only screen and (min-width: 768px) {
+    .all-speakers {
+        font-size:1.4em;
+        text-align: center;
+    }
+    
+    .pastchairs tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    .pastchairs td {
+        border: none;
+        padding: 0;
+        display: table-cell;
+    }
+    
+    .meetings th {
+        display: table-cell;
+        text-align: center;
+    }
+
+    .meetings td {
+        display: table-cell;
+        position: relative;
+        padding: 10px;
+        vertical-align: top;
+        border: 2px solid rgba(0, 0, 0, 0.08);
+        border-collapse: collapse;
+    }
+
+    .meetings td:nth-of-type(1) {
+        font-weight: normal;
+        padding: 10px;
+        border: 2px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .meetings td:nth-of-type(2) {
+        border: 2px solid rgba(0, 0, 0, 0.08);
+        padding: 10px;
+    }
+
+    .meetings td:nth-of-type(3) {
+        padding: 10px;
+    }
+
+}
+
+@media only screen and (min-width: 1025px) {
+    .all-speakers {
+        font-size:1.6em;
+        text-align: center;
+    }
+}
