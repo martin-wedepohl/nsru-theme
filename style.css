@@ -29,6 +29,14 @@ Text Domain: nsru
     margin-left: 20px;
 }
 
+.harbour-rooms-sold-out,
+.deluxe-rooms-sold-out,
+.hotel-booking-website-over,
+.hotel-booking-code-over,
+.paypal_closed {
+    color: red;
+}
+
 .pastchairstitle {
     font-weight: 700;
     margin-bottom: 20px;
