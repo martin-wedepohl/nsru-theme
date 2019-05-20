@@ -22,3 +22,8 @@ function nsru_theme_setup() {
     load_child_theme_textdomain( 'nsru', get_stylesheet_directory() . '/languages' );
 }
 add_action( 'after_setup_theme', 'nsru_theme_setup' );
+
+/**
+ * Add Yoast Breadcrumbs to the theme support
+ */
+add_theme_support( 'yoast-seo-breadcrumbs' );

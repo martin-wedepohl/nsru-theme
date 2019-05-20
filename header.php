@@ -32,3 +32,8 @@
 		<?php } // end Elementor Pro header
 		} ?>
 		<section id="wrapper-content" <?php layers_wrapper_class( 'wrapper_content', 'wrapper-content' ); ?>>
+        <?php
+            if ( function_exists('yoast_breadcrumb') ) {
+              yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+            }
+        ?>
