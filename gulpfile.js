@@ -14,7 +14,7 @@ var partialDir   = destDir + 'partials/';
 var styleSRC     = './style.css';
 
 // Root Files
-var rootFiles    = ['./functions.php', './header.php', './LICENSE', './README.md', './style.css', 'virtual_ticket_template.php'];
+var rootFiles    = ['./functions.php', './header.php', './LICENSE', './README.md', './style.css', 'virtual_ticket_template.php', 'virtual_sobriety_template.php'];
 
 // Partials
 var partialFiles = ['./partials/**/*'];
