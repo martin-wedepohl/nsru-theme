@@ -21,7 +21,7 @@ if ( count( $round_up_options ) > 0 ) {
 
 $table   = $wpdb->prefix . 'countdown';
 $sql     = 
-"SELECT name, 
+"SELECT `name`, `email`,
 TIMESTAMPDIFF(DAY, CONCAT(sobriety, ' 19:00:00'), DATE_FORMAT('" . $start_date . "', '%Y-%m-%d %H:%i:%S')) AS days_sober,
 TIMESTAMPDIFF(MONTH, CONCAT(sobriety, ' 19:00:00'), DATE_FORMAT('" . $start_date . "', '%Y-%m-%d %H:%i:%S')) AS months_sober,
 TIMESTAMPDIFF(YEAR, CONCAT(sobriety, ' 19:00:00'), DATE_FORMAT('" . $start_date . "', '%Y-%m-%d %H:%i:%S')) AS years_sober
@@ -52,31 +52,31 @@ $results = $wpdb->get_results( $sql );
 <h2 class="sobriety-header">Sobriety for Countdown on April 15, 2022</h2>
 
 <?php
-if ( !empty( $results ) ) {
+if ( ! empty( $results ) ) {
 	$years  = 0;
 	$months = 0;
 	$days   = 0;
-	foreach( $results as $row ) {
-		if ($row->years_sober > 0) { ?>
-			<p class="sobriety-row"><?php echo $row->name; ?>: <?php echo $row->years_sober; ?> Years</p>
+	foreach ( $results as $row ) {
+		if ( $row->years_sober > 0 ) { ?>
+			<p class="sobriety-row"><?php echo $row->name; ?>, <?php echo $row->email; ?>, <?php echo $row->years_sober; ?> Years</p>
 		<?php
 			$years += $row->years_sober;
-		} else if ($row->months_sober > 0) { ?>
-			<p class="sobriety-row"><?php echo $row->name; ?>: <?php echo $row->months_sober; ?> Months</p>
+		} else if ( $row->months_sober > 0 ) { ?>
+			<p class="sobriety-row"><?php echo $row->name; ?>, <?php echo $row->email; ?>, <?php echo $row->months_sober; ?> Months</p>
 		<?php
 			$months += $row->months_sober;
-		} else if ($row->days_sober > 0) { ?>
-			<p class="sobriety-row"><?php echo $row->name; ?>: <?php echo $row->days_sober; ?> Days</p>
+		} else if ( $row->days_sober > 0 ) { ?>
+			<p class="sobriety-row"><?php echo $row->name; ?>, <?php echo $row->email; ?>, <?php echo $row->days_sober; ?> Days</p>
 		<?php
 			$days += $row->days_sober;
 		} else { ?>
-			<p class="sobriety-row-none"><?php echo $row->name; ?>: -----</p>
+			<p class="sobriety-row-none"><?php echo $row->name; ?>, <?php echo $row->email; ?>, -----</p>
 		<?php
 		}
 	}
-	$months += intval($days / 30);
+	$months += intval( $days / 30 );
 	$days    = $days % 30;
-	$years  += intval($months / 12);
+	$years  += intval( $months / 12 );
 	$months  = $months % 12; ?>
 	<p class="sobriety-row-total">Total: <?php echo $years; ?> Years <?php echo $months; ?> Months <?php echo $days; ?> Days</p>
 	<?php
